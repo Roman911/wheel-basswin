@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="https://storage.hoster4land.site/lp/prjslo/bbbonanza/img/favicon.jpg">
+    <title></title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body>
+<input type="hidden" name="country_code" value="DE">
+
+<div class="loader">
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="app">
+    <div class="content">
+        <div class="title" data-translation-key="title"></div>
+        <div class="luckywheel">
+            <div class="wheel">
+                <div class="wheel__element" style="">
+                    <img src="./src/assets/wheel.png" alt="">
+                </div>
+                <div class="wheel__info">
+                    <div class="wheel__text-block" style="--total: 9"></div>
+                </div>
+                <img src="./src/assets/wheel-test.png" alt="" class="wheel__wrap" draggable="false">
+            </div>
+            <img src="./src/assets/arrow.png" alt="" class="wheel__active" draggable="false">
+            <img src="./src/assets/btn.png" alt="" class="wheel__btn" id="play" draggable="false">
+        </div>
+    </div>
+
+    <div id="stage-modal" class="modal" style="display: none;">
+        <div class="modal-wrap">
+            <div class="modal-content">
+                <div class="modal__head">
+                    <span>Try again</span>
+                    <span class="modal__close">×</span>
+                </div>
+                <div class="modal__body">
+                    <div>
+                        <div class="modal__result"></div>
+                        <div class="modal__info"></div>
+                    </div>
+                    <button class="popup__win-btn tryBtn go modal__btn" id="tryBtn">Try again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="final-modal" class="modal">
+    <div class="modal-wrap">
+        <div class="modal-content">
+            <div class="modal__head">
+                <span data-translation-key="modalHead"></span>
+                <span class="modal__close">×</span>
+            </div>
+            <div class="modal__body">
+                <div>
+                    <div class="modal__result"></div>
+                    <div class="modal__info" data-translation-key="modalStageInfo"></div>
+                </div>
+                <button class="popup__win-btn regBtn go modal__btn" id="regBtn" data-translation-key="modalFinalBtn"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/js/jquery-3.6.3.min.js"></script>
+<script src="src/js/gsap.min.js"></script>
+<script type="module" src="src/js/script.js"></script>
+</body>
+</html>
