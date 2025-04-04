@@ -160,11 +160,8 @@ export function useWheelAnimation (translation, currentCurrency) {
             level: prevGameResult ? prevGameResult.level + 1 : 1,
             value: [currentGameResult]
           }
-          localStorage.setItem('prjslo_SweetBonanza', JSON.stringify(result))
-
-          setTimeout(() => {
-            showModal()
-          }, 600)
+          localStorage.setItem('prjslo_SweetBonanza', JSON.stringify(result));
+          showModal();
           setTimeout(() => {
             $play.attr('disabled', false);
           }, 1100)
